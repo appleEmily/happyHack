@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Hack</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="slick-theme.css">
+
+
+    <!-- jQuery読み込んでまぁす vr3.5.1 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <!-- slickのjsファイルを読み込んでるよ -->
+    <script type="text/javascript" src="slick.min.js"></script>
+    <!-- bgswitcherだよ -->
+    <script type="text/javascript" src="jquery.bgswitcher.js"></script>
+
+    <!-- フワッと
+     -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.fuwat').css('visibility', 'hidden');
+            $(window).scroll(function() {
+                var windowHeight = $(window).height(),
+                    topWindow = $(window).scrollTop();
+                $('.fuwat').each(function() {
+                    var objectPosition = $(this).offset().top;
+                    if (topWindow > objectPosition - windowHeight + 200) {
+                        $(this).addClass("fuwatAnime");
+                    }
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logoContainer">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+                <p>We are Web Designers.</p>
+            </div>
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <li><a href="/index.html#access">Access</a></li>
+                        <li><a href="/index.html#images">Images</a></li>
+                        <li><a href="/index.html#courses">Courses</a></li>
+                        <li><a href="/index.html#introduction">Introduction</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <script>
+            $(".logoContainer").bgswitcher({
+                images: ["images/hero.jpg", "images/background2.jpg", "images/background3.jpg", "images/background4.jpg", "images/background5.jpg"],
+            });
+        </script>
+    </header>
+
+
+    <div class="section fuwat" id="introduction">
+        <h1 class="title" id="introduction-Title">Introduction</h1>
+        <div class="introduction-first">
+            <img class="introduction-img" src="images/introduction_001.jpg" alt="">
+            <div class="introduction-text1">
+                <p class="introduction-text">Happy Hackはいまをときめく若者がITを活用したものづくりに取り組める環境を提供しています。<br>
+                    特に､Webデザイン領域のプログラミングを学習している生徒が一番積極的に活動しています。<br>
+                    誰でも最初は初心者｡それを一番知っている我々がプログラミングへの第一歩を踏み出すお手伝いをさせていただきます。</p>
+                <div class="button1" id="button-blue"><a class="buttonlink" href="/index.html#introduction">会員登録</a></div>
+            </div>
+        </div>
+
+        <div class="introduction-second">
+            <img class="introduction-img" src="images/introduction_002.jpg" alt="">
+            <div class="introduction-text2">
+                <p class="introduction-text">Happy Hackでは｢楽しさ｣と｢真剣さ｣をモットーにプログラミングを学びます｡コースは全部で7つ準備をしています｡<br>
+                    WebデザインからWebサービス、3DゲームやiPhoneアプリまで幅広くお楽しみいただけます。<br>
+                    自分の想いをカタチにして発信することをぜひこの場で体験してみてください｡世界が変わって見えるかもしれません｡</p>
+
+                <div class="button1" id="button-yellow"><a class="buttonlink" href="/index.html#introduction">会員登録</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="courses fuwat" id="courses">
+        <div id="title-courses">
+            <h1 class="title" id>Courses</h1>
+        </div>
+        <div class="courses-collection">
+            <div class="courses-item">
+                <div class="img-div"><img src="images/html.png" alt=""></div>
+                <p>HTMLコース</p>
+<!--                <p class="button" id="button-html">このコースを受ける</p>-->
+                
+                <div class="button" id="button-html"><a class="buttonlink" href="/index.html#courses">このコースを受ける</a></div>
+                
+                
+            </div>
+            <div class="courses-item">
+                <div class="img-div"><img src="images/css.png" alt=""></div>
+                <p>CSSコース</p>
+                <div class="button" id="button-css"><a class="buttonlink" href="/index.html#courses">このコースを受ける</a></div>
+            </div>
+            <div class="courses-item">
+                <div class="img-div"><img src="images/unity.png" alt=""></div>
+                <p>Unityコース</p>
+                <div class="button" id="button-unity"><a class="buttonlink" href="/index.html#courses">このコースを受ける</a></div>
+            </div>
+            <div class="courses-item">
+                <div class="img-div"><img src="images/ruby.png" alt=""></div>
+                <p>Rubyコース</p>
+                <div class="button" id="button-ruby"><a class="buttonlink" href="/index.html#courses">このコースを受ける</a></div>
+            </div>
+            <div class="courses-item">
+                <div class="img-div"><img src="images/js.png" alt=""></div>
+                <p>JavaScriptコース</p>
+                <div class="button" id="button-js"><a class="buttonlink" href="/index.html#courses">このコースを受ける</a></div>
+            </div>
+            <div class="courses-item">
+                <div class="img-div"><img src="images/swift.png" alt=""></div>
+                <p>Swiftコース</p>
+                <div class="button" id="button-swift"><a class="buttonlink" href="/index.html#courses">このコースを受ける</a></div>
+            </div>
+            <div class="courses-item">
+                <div class="img-div"><img src="images/go.png" alt=""></div>
+                <p>Goコース</p>
+                <div class="button" id="button-go"><a class="buttonlink" href="/index.html#courses">このコースを受ける</a></div>
+            </div>
+        </div>
+        <div class="star">
+
+            <div id="hoge"></div>
+
+
+        </div>
+
+    </div>
+
+    <div class="images fuwat" id="images">
+        <h1 class="title">Images</h1>
+        <div class="images-slide">
+            <img src="images/hero.jpg" alt="">
+            <img src="images/background2.jpg" alt="">
+            <img src="images/background3.jpg" alt="">
+            <img src="images/background4.jpg" alt="">
+            <img src="images/background5.jpg" alt="">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('.images-slide').slick({
+            dots: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+
+        });
+    </script>
+
+    <div class="section fuwat" id="access">
+        <h1 class="title" id>Access</h1>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6560.6262797845075!2d135.492449!3d34.697281!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9fec1659611f776f!2zTGlmZSBpcyBUZWNoISDlpKfpmKrjgqrjg5XjgqPjgrk!5e0!3m2!1sja!2sjp!4v1601138822252!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+
+    <footer class="title" id="footer">©︎ 2019 Happy Hack Inc.</footer>
+
+    <!-- 星座を出すよ〜 -->
+    <script src="js/particles.min.js"></script>
+    <script src="js/setting.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

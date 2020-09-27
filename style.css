@@ -1,0 +1,354 @@
+/*フォント管理*/
+
+@font-face {
+    font-family: 'FuturaMed';
+    src: url('Futura-Med.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FuturaBoo';
+    src: url('Futura-Boo.ttf') format('truetype');
+}
+
+
+body {
+    margin: 0;
+}
+
+
+.logoContainer {
+    width: 100%;
+    height: 940px;
+    background-size: 100%;
+}
+
+.logo {
+    position: relative;
+    background-size: 100%;
+    text-align: center;
+    width: 910px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+.logo img {
+    background-repeat: none;
+    background-size: 100%;
+    width: 910px;
+}
+
+.logo p {
+    font-family: 'FuturaMed';
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.nav {
+    overflow: hidden;
+    margin-right: 30px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.logoContainer ul {
+    list-style: none;
+}
+
+.logoContainer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logoContainer li {
+    font-size: 30px;
+    color: #ffffff;
+    font-family: 'FuturaMed';
+    text-decoration: none;
+    float: right;
+    padding-right: 30px;
+
+}
+
+
+/*各項目のタイトル*/
+.title {
+    font-family: 'FuturaBoo';
+    text-align: center;
+    font-size: 60px;
+    color: #3D5CDB;
+}
+
+.section {
+    width: 1040px;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.fuwat {
+    margin: 0 auto 70px auto;
+}
+
+
+/*ここからしたにintroduction*/
+#introduction-Title {
+    font-family: 'FuturaBoo';
+    font-size: 65px;
+}
+.introduction-text {
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', sans-serif;
+    line-height: 32px;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.button1 {
+    width: 170px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', sans-serif;
+}
+
+
+#button-blue {
+    background-color: #3D5CDB;
+}
+
+#button-blue:hover {
+     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+
+#button-yellow:hover {
+     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+#button-yellow {
+    background-color: #FFBF00;
+}
+
+
+/*ここにボタンの話*/
+.buttonlink {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.introduction-text1 {
+    margin-left: 90px;
+    margin-bottom: 38px;
+    float: left;
+    width: 400px;
+}
+
+.introduction-first {
+    margin-bottom: 30px;
+    overflow: hidden;
+    margin-bottom: 90px;
+}
+
+.introduction-first img {
+    width: 500px;
+    float: left;
+}
+
+/*introduction ２個目のコンテンツ*/
+.introduction-second img {
+    width: 500px;
+    float: right;
+}
+
+.introduction-text2 {
+    margin-right: 90px;
+    float: right;
+    width: 400px;
+}
+
+/*
+.courses {
+    z-index: 1;
+    position: absolute;
+    width: 1040px;
+}
+*/
+
+/*ここからしたにcourses*/
+
+#title-courses {
+    z-index: 2;
+    position: absolute;
+    width: 1040px;
+    text-align: center;
+    /*    改善ポイント*/
+    margin-left: 377px;
+    height: 173px;
+}
+
+.courses-collection {
+    z-index: 1;
+    position: absolute;
+    width: 1040px;
+    height: auto;
+    margin: 173px auto 0 377px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.courses-item {
+    border-radius: 12px;
+    width: 240px;
+    height: 340px;
+    background-color: #fff;
+    margin: 15px 10px;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.img-div {
+    display: table-cell;
+    margin-top: 30px;
+    padding-left: 70px;
+    text-align: center;
+    height: 200px;
+    vertical-align: middle;
+
+}
+
+.courses-item img {
+    width: 100px;
+}
+
+.courses-item p {
+    font-weight: bold;
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', sans-serif;
+    color: #333333;
+}
+
+/*ボタン*/
+
+.button {
+    width: 170px;
+    height: 40px;
+    margin: 0 auto;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', sans-serif;
+    margin-bottom: 45px;
+    align-items: flex-end;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+#button-html {
+    background-color: #e16e3b;
+    color: #fff;
+}
+
+#button-css {
+    background-color: #52a7da;
+    color: #fff;
+}
+
+#button-unity {
+    background-color: #333;
+    color: #fff;
+}
+
+#button-ruby {
+    background-color: #ed5f59;
+    color: #fff;
+}
+
+#button-js {
+    background-color: #f9d748;
+    color: #fff;
+}
+
+#button-swift {
+    background-color: #ee7d47;
+    color: #fff;
+}
+
+#button-go {
+    background-color: #89ccdb;
+    color: #fff;
+}
+
+/*この下が背景の星座*/
+
+#hoge {
+    position: relative;
+    display: block;
+    background-color: #BAD5F5;
+    opacity: 0.5;
+    width: 100%;
+    height: 940px;
+    margin: 0 auto;
+}
+
+/*images*/
+.images {
+
+    margin: 0 auto 70px;
+
+}
+
+.images-slide {
+    width: 1440px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/*地図の埋め込み。*/
+
+.map {}
+
+
+/*フッターの追加設定*/
+#footer {
+    font-size: 18px;
+    line-height: 60px;
+}
+
+
+/*フワッと*/
+
+.fuwatAnime {
+ -webkit-animation-fill-mode:both;
+ -ms-animation-fill-mode:both;
+ animation-fill-mode:both;
+ -webkit-animation-duration:1.5s;
+ -ms-animation-duration:1.5s;
+ animation-duration:1.5s;
+ -webkit-animation-name: fuwatAnime;
+ -ms-animation-name: fuwatAnime;
+ animation-name: fuwatAnime;
+ visibility: visible !important;
+}
+@-webkit-keyframes fuwatAnime {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@keyframes fuwatAnime {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+}
