@@ -10,27 +10,41 @@
     src: url('Futura-Boo.ttf') format('truetype');
 }
 
+html {
+    min-width: 0px;
+}
 
 body {
     margin: 0;
+    width: 480px;
 }
 
 
 .logoContainer {
-    width: 100%;
-    height: 940px;
-    background-size: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+
+    /*    ここやらなきゃ！*/
+}
+
+@media screen and(min-width:480px) {
+    .logocontainer {
+        width: 100%;
+    }
 }
 
 .logo {
     position: relative;
     background-size: 100%;
     text-align: center;
-    width: 910px;
+    max-width: 910px;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     -webkit- transform: translateY(-50%) translateX(-50%);
+    
 }
 
 
@@ -38,7 +52,7 @@ body {
 .logo img {
     background-repeat: none;
     background-size: 100%;
-    width: 910px;
+    max-width: 910px;
 }
 
 .logo p {
@@ -53,6 +67,13 @@ body {
     position: absolute;
     top: 20px;
     right: 0;
+
+}
+
+@media screen and(min-width:480px) {
+    .nav {
+        display: none;
+    }
 }
 
 .logoContainer ul {
@@ -84,7 +105,7 @@ body {
 }
 
 .section {
-    width: 1040px;
+    max-width: 1040px;
     height: auto;
     overflow: hidden;
     text-align: center;
@@ -100,6 +121,7 @@ body {
     font-family: 'FuturaBoo';
     font-size: 65px;
 }
+
 .introduction-text {
     font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', sans-serif;
     line-height: 32px;
@@ -127,11 +149,11 @@ body {
 }
 
 #button-blue:hover {
-     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
 }
 
 #button-yellow:hover {
-     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -150,31 +172,68 @@ body {
     margin-left: 90px;
     margin-bottom: 38px;
     float: left;
-    width: 400px;
+    max-width: 400px;
 }
 
 .introduction-first {
-    margin-bottom: 30px;
+    /*    margin-bottom: 30px;*/
     overflow: hidden;
     margin-bottom: 90px;
+    width: auto;
 }
 
 .introduction-first img {
-    width: 500px;
+    max-width: 500px;
     float: left;
 }
 
-/*introduction ２個目のコンテンツ*/
-.introduction-second img {
-    width: 500px;
-    float: right;
+.introduction-second {
+    overflow: hidden;
 }
+
+/*introduction ２個目のコンテンツ*/
 
 .introduction-text2 {
     margin-right: 90px;
     float: right;
-    width: 400px;
+    max-width: 400px;
 }
+
+.introduction-second img {
+    max-width: 500px;
+    float: right;
+}
+
+/*introduction スマホ版*/
+
+@media screen and(min-width : 480px) {
+    .introduction-text1 {
+        float: none;
+    }
+
+    .introduction-first img {
+        float: none;
+    }
+
+    .introduction-text2 {
+        float: none;
+    }
+
+    .introduction-second img {
+        float: none;
+    }
+
+    .introduction-first {
+        margin: 0 auto;
+    }
+
+    .introduction-second {
+        margin: 0 auto;
+    }
+
+}
+
+
 
 /*
 .courses {
@@ -185,23 +244,23 @@ body {
 */
 
 /*ここからしたにcourses*/
+.courses {
+    overflow: hidden;
+    position: relative;
+}
 
 #title-courses {
-    z-index: 2;
-    position: absolute;
-    width: 1040px;
+    max-width: 1040px;
     text-align: center;
     /*    改善ポイント*/
-    margin-left: 377px;
+    margin: 0 auto;
     height: 173px;
 }
 
 .courses-collection {
-    z-index: 1;
-    position: absolute;
-    width: 1040px;
+    max-width: 1040px;
     height: auto;
-    margin: 173px auto 0 377px;
+    margin: 0 auto;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
@@ -230,13 +289,29 @@ body {
 }
 
 .courses-item img {
-    width: 100px;
+    max-width: 100px;
 }
 
 .courses-item p {
     font-weight: bold;
     font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', sans-serif;
     color: #333333;
+}
+
+/*この下が背景の星座*/
+
+#hoge {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background-color: #BAD5F5;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    top: 0;
+    left: 0;
 }
 
 /*ボタン*/
@@ -295,17 +370,7 @@ body {
     color: #fff;
 }
 
-/*この下が背景の星座*/
 
-#hoge {
-    position: relative;
-    display: block;
-    background-color: #BAD5F5;
-    opacity: 0.5;
-    width: 100%;
-    height: 940px;
-    margin: 0 auto;
-}
 
 /*images*/
 .images {
@@ -315,14 +380,16 @@ body {
 }
 
 .images-slide {
-    width: 1440px;
+    max-width: 1440px;
     overflow: hidden;
     margin: 0 auto;
 }
 
 /*地図の埋め込み。*/
 
-.map {}
+.map {
+    max-width: 600pxf;
+}
 
 
 /*フッターの追加設定*/
@@ -335,22 +402,42 @@ body {
 /*フワッと*/
 
 .fuwatAnime {
- -webkit-animation-fill-mode:both;
- -ms-animation-fill-mode:both;
- animation-fill-mode:both;
- -webkit-animation-duration:1.5s;
- -ms-animation-duration:1.5s;
- animation-duration:1.5s;
- -webkit-animation-name: fuwatAnime;
- -ms-animation-name: fuwatAnime;
- animation-name: fuwatAnime;
- visibility: visible !important;
+    -webkit-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1.5s;
+    -ms-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fuwatAnime;
+    -ms-animation-name: fuwatAnime;
+    animation-name: fuwatAnime;
+    visibility: visible !important;
 }
+
 @-webkit-keyframes fuwatAnime {
- 0% { opacity: 0; -webkit-transform: translateY(-20px); }
- 100% { opacity: 1; -webkit-transform: translateY(0); }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
 }
+
 @keyframes fuwatAnime {
- 0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
- 100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
 }
