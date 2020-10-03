@@ -459,4 +459,17 @@ nav {
     .courses-item img {
         height: 90px;
     }
+    .button {
+    width: 100px;
+    height: 40px;
+    margin: 0 auto;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 7px;
+    font-weight: bold;
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', sans-serif;
+    margin-bottom: 45px;
+    align-items: flex-end;
+}
 }
