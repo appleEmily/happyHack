@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'FuturaMed';
-    src: url('fonts/Futura-Med.ttf') format('truetype');
+    src: url('../fonts/Futura-Med.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'FuturaBoo';
-    src: url('fonts/Futura-Boo.ttf') format('truetype');
+    src: url('../fonts/Futura-Boo.ttf') format('truetype');
 }
 
 body {
@@ -20,14 +20,37 @@ body {
     background-size: cover;
     background-repeat: none;
     background-position: center;
-
-    /*    ここやらなきゃ！*/
 }
 
-@media screen and(min-width:480px) {
-    .logocontainer {
-        width: 100%;
-    }
+nav {
+    overflow: hidden;
+    margin-right: 30px;
+    position: relative;
+    top: 20px;
+    right: 0;
+}
+
+.logoContainer ul {
+    list-style: none;
+}
+
+.logoContainer li {
+    font-size: 30px;
+    color: #ffffff;
+    font-family: 'FuturaMed';
+    text-decoration: none;
+    float: right;
+    padding-right: 30px;
+}
+
+.logoContainer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logoContainer a:hover {
+    color: #3D5CDB;
+    transition: 0.5s;
 }
 
 .logo {
@@ -39,15 +62,13 @@ body {
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     -webkit- transform: translateY(-50%) translateX(-50%);
-    
+
 }
-
-
 
 .logo img {
     background-repeat: none;
     background-size: 100%;
-    max-width: 910px;
+    width: 100%;
 }
 
 .logo p {
@@ -55,41 +76,6 @@ body {
     font-size: 50px;
     color: #ffffff;
 }
-
-.nav {
-    overflow: hidden;
-    margin-right: 30px;
-    position: absolute;
-    top: 20px;
-    right: 0;
-
-}
-
-@media screen and(min-width:480px) {
-    .nav {
-        display: none;
-    }
-}
-
-.logoContainer ul {
-    list-style: none;
-}
-
-.logoContainer a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.logoContainer li {
-    font-size: 30px;
-    color: #ffffff;
-    font-family: 'FuturaMed';
-    text-decoration: none;
-    float: right;
-    padding-right: 30px;
-
-}
-
 
 /*各項目のタイトル*/
 .title {
@@ -199,37 +185,6 @@ body {
     float: right;
 }
 
-/*introduction スマホ版*/
-
-@media screen and(min-width : 480px) {
-    .introduction-text1 {
-        float: none;
-    }
-
-    .introduction-first img {
-        float: none;
-    }
-
-    .introduction-text2 {
-        float: none;
-    }
-
-    .introduction-second img {
-        float: none;
-    }
-
-    .introduction-first {
-        margin: 0 auto;
-    }
-
-    .introduction-second {
-        margin: 0 auto;
-    }
-
-}
-
-
-
 /*
 .courses {
     z-index: 1;
@@ -273,18 +228,10 @@ body {
 
 }
 
-.img-div {
-    display: table-cell;
-    margin-top: 30px;
-    padding-left: 70px;
-    text-align: center;
-    height: 200px;
-    vertical-align: middle;
-
-}
-
 .courses-item img {
-    max-width: 100px;
+    margin: 30px 0;
+    height: 130px;
+    text-align: center;
 }
 
 .courses-item p {
@@ -370,14 +317,15 @@ body {
 /*images*/
 .images {
 
-    margin: 0 auto 70px;
+    margin: 0 auto;
 
 }
 
 .images-slide {
-    max-width: 1440px;
+    max-width: 1080px;
     overflow: hidden;
     margin: 0 auto;
+    padding: 0 80px;
 }
 
 /*地図の埋め込み。*/
@@ -434,5 +382,81 @@ body {
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
         transform: translateY(0);
+    }
+}
+
+
+
+/*introduction スマホ版*/
+
+@media screen and (max-width : 480px) {
+    .logoContainer {
+        width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo {
+        max-width: 380px;
+    }
+
+    .logo p {
+        font-size: 20px;
+    }
+
+    .introduction-first img {
+        float: none;
+        margin: 10px;
+        max-width: 380px;
+
+    }
+
+    .introduction-second img {
+        float: none;
+        margin: 10px;
+        max-width: 380px;
+    }
+
+    .introduction-text1 {
+        float: none;
+        max-width: 450px;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .introduction-text2 {
+        float: none;
+        max-width: 450px;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .introduction-text {
+        line-height: 24px;
+        font-size: 12px;
+        margin: 0 0 20px 0;
+    }
+
+    .introduction-first {
+        margin: 0 auto;
+    }
+
+    .introduction-second {
+        margin: 0 auto;
+    }
+
+    #introduction-Title {
+        font-size: 40px;
+    }
+
+    .courses-item {
+        max-width: 180px;
+        max-height: 280px;
+    }
+    
+    .courses-item img {
+        height: 90px;
     }
 }
