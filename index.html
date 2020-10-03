@@ -8,24 +8,25 @@
 
     <!--    レスポンシブ化対応_ビューポートの設定-->
     <meta　name="viewport"content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="slick.css">
-    <link rel="stylesheet" href="slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
 
 
     <!-- jQuery読み込んでまぁす vr3.5.1 -->
-<!--    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
     <!-- slickのjsファイルを読み込んでるよ -->
-<!--    <script type="text/javascript" src="slick.min.js"></script>-->
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <!-- bgswitcherだよ -->
-    <script type="text/javascript" src="jquery.bgswitcher.js"></script>
+    <script type="text/javascript" src="js/jquery.bgswitcher.js"></script>
 
     <!--    星は下で読み込んでいます。-->
 
     <!-- フワッと
      -->
-<!--
+
     <script type="text/javascript">
         $(document).ready(function() {
             $('.fuwat').css('visibility', 'hidden');
@@ -41,7 +42,7 @@
             });
         });
     </script>
--->
+
 
 </head>
 
@@ -73,7 +74,6 @@
     </header>
 
 
-<!--
     <div class="section fuwat" id="introduction">
         <h1 class="title" id="introduction-Title">Introduction</h1>
         <div class="introduction-first">
@@ -96,9 +96,7 @@
             </div>
         </div>
     </div>
--->
 
-<!--
     <div class="courses fuwat" id="courses">
         <div id="title-courses">
             <h1 class="title" id>Courses</h1>
@@ -147,9 +145,7 @@
         <div id="hoge"></div>
 
     </div>
--->
 
-<!--
     <div class="images fuwat" id="images">
         <h1 class="title">Images</h1>
         <div class="images-slide">
@@ -166,19 +162,22 @@
             dots: true,
             slidesToShow: 4,
             slidesToScroll: 1,
+            responsive: [{
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }]
 
         });
     </script>
--->
 
-<!--
     <div class="section fuwat" id="access">
         <h1 class="title" id>Access</h1>
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6560.6262797845075!2d135.492449!3d34.697281!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9fec1659611f776f!2zTGlmZSBpcyBUZWNoISDlpKfpmKrjgqrjg5XjgqPjgrk!5e0!3m2!1sja!2sjp!4v1601138822252!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
--->
 
-<!--    <footer class="title" id="footer">©︎ 2019 Happy Hack Inc.</footer>-->
+    <footer class="title" id="footer">©︎ 2019 Happy Hack Inc.</footer>
 
     <!-- 星座を出すよ〜 -->
     <script src="js/particles.min.js"></script>

@@ -2,21 +2,16 @@
 
 @font-face {
     font-family: 'FuturaMed';
-    src: url('Futura-Med.ttf') format('truetype');
+    src: url('fonts/Futura-Med.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'FuturaBoo';
-    src: url('Futura-Boo.ttf') format('truetype');
-}
-
-html {
-    min-width: 0px;
+    src: url('fonts/Futura-Boo.ttf') format('truetype');
 }
 
 body {
     margin: 0;
-    width: 480px;
 }
 
 
